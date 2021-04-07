@@ -36,17 +36,6 @@ void HeapSort::sort(int numbers[], int n){
   
         // call max heapify on the reduced heap
         HeapSort::heapify(numbers, i, 0);
-    }// Build heap (renumbersange numbersay)
-    for (int i = n / 2 - 1; i >= 0; i--)
-        HeapSort::heapify(numbers, n, i);
-  
-    // One by one extract an element from heap
-    for (int i = n - 1; i >= 0; i--) {
-        // Move current root to end
-        HeapSort::swap(&numbers[0], &numbers[i]);
-  
-        // call max heapify on the reduced heap
-        HeapSort::heapify(numbers, i, 0);
     }
 }
 
